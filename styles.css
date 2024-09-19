@@ -1,0 +1,151 @@
+.formato_cuerpo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    width: 100%;
+    max-width: 900px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: auto
+}
+.button{
+    background-color: rgb(56, 111, 228);
+    border-radius: 80px;
+    color: white;
+    height: auto;
+    width: auto;
+    padding: 10px 20px;
+    font-size: 1em
+}
+.boton-alineacion{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0
+}
+.container1{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto
+}
+.pricing-table{
+    height: 385px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    max-width: none;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-size: large;
+    margin: auto
+}
+.pricing-table-header{
+    background: rgb(56, 111, 228);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0
+}
+.pricing-table-price{
+    font-size: 50px;
+    text-align: center
+}
+.pricing-table-header h1{
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: bold
+}
+.pricing-table-list{
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+    text-align: center;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif
+}
+.pricing-table-list li{
+    padding: 1em 0;
+    background: #f7f7f7;
+    border-bottom: 1px solid #e7e7e7
+}
+@media (max-width: 900px){
+    .formato_cuerpo{
+        padding: 15px;
+        border-radius: 20px
+    }
+    .container{
+        flex-direction: column;
+        align-items: center
+    }
+    .pricing-table{
+        width: 100%;
+        max-width: none;
+        margin-bottom: 20px
+    }
+    .button{
+        font-size: 0.9em;
+        padding: 8px 16px
+    }
+}
+@media (max-width: 600px){
+    .formato_cuerpo{
+        padding: 10px;
+        border-radius: 10px
+    }
+    .pricing-table-header h1{
+        font-size: 1.2em;
+        color: #fff
+    }
+    .pricing-table-list{
+        font-size: 0.9em
+    }
+    .button{
+        font-size: 0.8em;
+        padding: 6px 12px
+    }
+}
+.entry-header .entry-title a, h1, h2, h3, h4, h5, h6, .post .entry-header .entry-title a{
+    color: #ffffff
+}
+.icono{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-top: -30px;
+    padding: 0
+}
+@media (max-width: 768px){
+    .container1{
+        flex-direction: column;
+        align-items: center
+    }
+    .pricing-table{
+        width: 100%;
+        margin-bottom: 20px;
+        max-width: none
+    }
+    .pricing-table-header{
+        padding: 15px 0
+    }
+    .pricing-table-price{
+        font-size: 40px
+    }
+    .pricing-table-list li{
+        padding: 0.8em 0;
+        font-size: 0.9em
+    }
+    .button{
+        font-size: 0.9em;
+        padding: 8px 16px
+    }
+}
+ 

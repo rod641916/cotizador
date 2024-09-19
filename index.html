@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+    integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.n
+  et/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="https://kit.fontawesome.com/b0dd2f6071.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <div class="formato_cuerpo">
+    <form class="pure-form pure-form-stacked">
+      <fieldset>
+        <legend>Cotizador rápido</legend>
+        <div class="pure-g">
+          <div class="pure-u-1 pure-u-md-1-3">
+            <label for="idioma_origen">Idioma origen</label>
+            <select id="idioma_origen" class="pure-input-rounded" style="width: 80%">
+              <option></option>
+              <option id="italiano">Alemán</option>
+              <option id="chino">Chino</option>
+              <option id="ingles">Español</option>
+              <option id="aleman">Francés</option>
+              <option id="chino">Holandés</option>
+              <option id="espanol">Inglés</option>
+              <option id="chino">Italiano</option>
+              <option id="chino">Japonés</option>
+              <option id="chino">Koreano</option>
+              <option id="chino">Portugués</option>
+            </select>
+          </div>
+          <div class="pure-u-1 pure-u-md-1-3">
+            <label for="idioma_destino">Idioma meta</label>
+            <select id="idioma_destino" class="pure-input-rounded" style="width: 80%">
+              <option></option>
+              <option id="italiano">Alemán</option>
+              <option id="chino">Chino</option>
+              <option id="ingles">Español</option>
+              <option id="aleman">Francés</option>
+              <option id="chino">Holandés</option>
+              <option id="espanol">Inglés</option>
+              <option id="chino">Italiano</option>
+              <option id="chino">Japonés</option>
+              <option id="chino">Koreano</option>
+              <option id="chino">Portugués</option>
+            </select>
+          </div>
+          <div class="pure-u-1 pure-u-md-1-3">
+            <label for="palabras">Número de palabras</label>
+            <input value="100" id="palabras" style="width: 80%" class="pure-input-rounded" />
+          </div>
+          <div class="pure-u-1 pure-u-md-1-3">
+            <label for="idioma_destino">Documento es editable<i class="fa-solid fa-question Informacion"
+                title="Información de documentos editables" id="informacion" onclick="Informacion(event)"
+                style="cursor: pointer;"></i></label>
+            <select id="documento_editable" class="pure-input-rounded" style="width: 80%">
+              <option id="editable_si">Si</option>
+              <option id="editable_no">No</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+      <div class="boton-alineacion">
+        <button type="button" onclick="Calcular(event);mostrar(event)" class="pure-button pure-button-primary">
+          Cotizar
+        </button>
+      </div>
+      <p style="font-size: small; text-align: center">
+        Esta cotización es preliminar para documento con formato editable
+      </p>
+    </form>
+
+    <div class="container1">
+      <div class="pure-u-1 pure-u-md-1-3">
+        <div class="pricing-table pricing-table-enterprise">
+          <div class="pricing-table-header">
+            <h2>BÁSICA</h2>
+            <span class="pricing-table-price" id="cotizacion_basica"></span>
+          </div>
+          <ul class="pricing-table-list">
+            <li>
+              <i class="fa-solid fa-computer"></i> Traducción automática
+            </li>
+            <li>
+              <i class="fa-solid fa-file-circle-check"></i> Revisión general
+              <p></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-3">
+        <div class="pricing-table pricing-table-enterprise">
+          <div class="pricing-table-header">
+            <h2>PLUS</h2>
+            <span class="pricing-table-price" id="cotizacion_plus"></span>
+          </div>
+          <ul class="pricing-table-list">
+            <li>
+              <i class="fa-solid fa-computer"></i> Traductor especializado
+            </li>
+            <li>
+              <i class="fa-solid fa-magnifying-glass"></i> Revisión a fondo
+              por un corrector experto en el tema
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-3">
+        <div class="pricing-table pricing-table-enterprise">
+          <div class="pricing-table-header">
+            <h2>EXCLUSIVA</h2>
+            <span class="pricing-table-price" id="cotizacion_exclusiva"></span>
+          </div>
+          <ul class="pricing-table-list">
+            <li>
+              <i class="fa-solid fa-computer"></i> Traductor especializado
+            </li>
+            <li>
+              <i class="fa-solid fa-magnifying-glass"></i> Revisión a fondo
+              por un corrector experto en el tema
+            </li>
+            <li>
+              <i class="fa-solid fa-user-check"></i> Edición por especialista
+              en control de calidad
+            </li>
+            <u><span id="formato_no_editable_exclusivo"></span></u>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- end pricing-tables -->
+    <div class="boton-alineacion">
+      <a href='https://babelint.com/cotizacion-expres/'>
+        <button type="button" class="pure-button pure-button-primary">
+          Cotización formal
+        </button>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>
